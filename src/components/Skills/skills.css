@@ -1,0 +1,124 @@
+.skills {
+    text-align: center; /* Center-align the text */
+    padding: 20px; /* Padding around the section */
+  }
+  
+  .skills-header {
+    font-size: 24px; /* Font size for the header */
+    color: var(--color-white); /* White text */
+  }
+  
+  .skills-list {
+    display: flex; /* Flex layout for list items */
+    justify-content: space-evenly; /* Evenly distribute the items */
+    flex-wrap: wrap; /* Allow wrapping onto new rows */
+    padding: 20px; /* Padding around the list */
+    overflow: hidden; /* Prevent overflow outside the section */
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align each item */
+    margin: 20px; /* Increased margin for better spacing */
+    font-size: 20px; /* Font size for the item text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: transform 1s; /* Smooth transition for animations */
+  }
+  
+  .skill-icon {
+    font-size: 40px; /* Icon size */
+    color: var(--color-white); /* White color for icons */
+  }
+  
+  .skill-box {
+    border: 2px solid var(--color-red); /* Border around skill name */
+    padding: 10px; /* Padding for the box */
+    border-radius: 5px; /* Rounded corners */
+    color: var(--color-white); /* White text */
+  }
+  
+  .skill-item:hover {
+    transform: rotate(360deg); /* Rotate 360 degrees on hover */
+  }
+  
+  @keyframes random-move {
+    0% {
+      transform: translate(0, 0); /* Start position */
+    }
+    25% {
+      transform: translate(30px, -30px); /* Larger movement range */
+    }
+    50% {
+      transform: translate(-30px, 30px); /* Larger movement range */
+    }
+    75% {
+      transform: translate(20px, -20px); /* Smaller movement range */
+    }
+    100% {
+      transform: translate(0, 0); /* Back to start */
+    }
+  }
+  
+  /* Apply unique animations to each item for random movement */
+  .skill-animation-0 {
+    animation: random-move 10s infinite alternate;
+  }
+  
+  .skill-animation-1 {
+    animation: random-move 11s infinite alternate;
+  }
+  
+  skill-animation-2 {
+    animation: random-move 9s infinite alternate;
+  }
+  
+  skill-animation-3 {
+    animation: random-move 12s infinite alternate;
+  }
+  
+  skill-animation-4 {
+    animation: random-move 10s infinite alternate;
+  }
+  
+  skill-animation-5 {
+    animation: random-move 11s infinite alternate;
+  }
+  
+  skill-animation-6 {
+    animation: random-move 8s infinite alternate;
+  }
+  
+  /* Additional unique animations to ensure randomness */
+  .skill-animation-7 {
+    animation: random-move 10.5s infinite alternate;
+  }
+  
+  .skill-animation-8 {
+    animation: random-move 11.5s infinite alternate;
+  }
+  
+  .skill-animation-9 {
+    animation: random-move 9.5s infinite alternate;
+  }
+  
+  .skill-animation-10 {
+    animation: random-move 12s infinite alternate;
+  }
+  
+  skill-animation-11 {
+    animation: random-move 10s infinite alternate;
+  }
+  
+  .skill-animation-12 {
+    animation: random-move 9s infinite alternate;
+  }
+  
+  skill-animation-13 {
+    animation: random-move 11s infinite alternate;
+  }
+  
+  skill-animation-14 {
+    animation: random-move 12s infinite alternate;
+  }
+  

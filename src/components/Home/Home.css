@@ -1,0 +1,165 @@
+.hero {
+    display: flex; /* Flex layout for hero section */
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Center-align items */
+    padding: 20px; /* General padding */
+    color: var(--color-white); /* White text color */
+    margin-top: 70px; /* Margin from the top */
+  }
+  
+  .hero-left {
+    flex: 1; /* Allow this section to take the remaining space */
+    margin-left: 30px; /* Original margin */
+  }
+  
+  .hero-right {
+    flex-basis: 40%; /* Fixed space for the image box */
+    display: flex;
+    justify-content: center; /* Center-align the image box */
+    align-items: center; /* Center-align vertically */
+  }
+  
+  .pic-box {
+    width: 350px; /* Width for the outer shell */
+    height: 310px; /* Height for the outer shell */
+    border: 4px solid rgba(217, 217, 217, 0.3); /* Light border */
+    border-radius: 15px 100px 15px 100px; /* Border-radius pattern */
+  }
+  
+  .pic-box img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure image stays within bounds */
+    border-radius: 15px 100px 15px 100px; /* Match border-radius */
+  }
+  
+  .name-title {
+    padding: 15px 25px; /* Padding for the title */
+    font-size: 55px; /* Large font size */
+  }
+
+  #lightshow {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(../../images/back.png);
+    -webkit-background-clip: text ;
+    animation: spin 20s linear infinite;
+  }
+  #linked {
+    text-decoration: none;
+  }
+
+  
+  @keyframes spin {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+  .profession {
+    display: inline-flex; /* Align inline */
+    align-items: center; /* Align line and text */
+    padding: 10px; /* Padding for the profession section */
+  }
+  
+  .line {
+    width: 100px; /* Length of the line */
+    height: 1px; /* Thin line */
+    border: 0.5px solid var(--color-white); /* White color */
+  }
+  
+  .name-profession {
+    font-size: xx-large; /* Large font size */
+    margin-left: 10px; /* Spacing between line and text */
+  }
+  
+  .brief-profession-description {
+    font-size: 24px; /* Font size for the description */
+    padding-bottom: 15px; /* Bottom padding */
+  }
+  
+  .hello-button {
+    width: 150px;
+    color: var(--color-white);
+    background: var(--color-red);
+    font-size: 17px;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 180px;
+    padding: 5px 0;
+}
+
+  .hello-button:hover {
+    background:var(--color-white);
+    color: var(--color-black);
+}
+  
+  .cv-link {
+    display: flex; /* Flex layout for the CV button */
+    align-items: center; /* Center-align */
+    justify-content: center; /* Center-align */
+    background: var(--color-red); /* Red background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 6px; /* Padding */
+    font-size: 16px; /* Font size */
+    color: var(--color-white); /* White text */
+    margin: 50px auto; /* Center horizontally */
+  }
+  
+  .cv-link:hover {
+    background: var(--color-white); /* Hover effect */
+    color: var(--color-black); /* Black text on hover */
+  }
+
+  #arrow-up-down {
+    margin-left: 7px;
+    background: none;
+}
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column-reverse; /* Image comes before text on smaller screens */
+      align-items: center; /* Center-align */
+      padding: 10px 20px; /* Adjusted padding for smaller screens */
+    }
+  
+    .hero-right {
+      margin-bottom: 20px; /* Add spacing between image and text */
+    }
+    .hello-button {
+        margin-left: -30px;
+    }
+    .pic-box {
+      width: 200px; /* Adjusted width */
+      height: 200px; /* Adjusted height */
+      margin: 10px auto; /* Center-align the image box */
+    }
+  
+    .hero-left {
+      text-align: center; /* Center-align text */
+      padding: 10px; /* Padding for smaller screens */
+    }
+  
+    .name-title {
+      font-size: 36px; /* Adjusted font size for smaller screens */
+    }
+  
+    .profession {
+      justify-content: center; /* Center-align the profession section */
+      white-space: nowrap;
+    }
+    .name-profession {
+        font-size: 30px;
+    }
+    .brief-profession-description {
+      text-align: center; /* Center-align description */
+      font-size: 22px;
+    }
+    .cv-link {
+        margin-top: -1px;
+    }
+  }
+  

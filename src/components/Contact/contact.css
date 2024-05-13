@@ -1,0 +1,76 @@
+.contact-header {
+  text-align: center; /* Center-align the header */
+  font-size: 28px; /* Larger font size for the header */
+  color: var(--color-white); /* White text */
+  padding: 20px; /* Padding around the header */
+}
+
+.changing-text {
+  color: #f9004d; /* Red color for changing text */
+}
+
+.contact-boxes {
+  display: flex; /* Enable flex layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-evenly; /* Evenly space the boxes */
+  padding: 20px; /* Padding around the boxes */
+}
+
+.contact-box {
+  display: flex; /* Enable flex layout */
+  flex-direction: column; /* Stack vertically */
+  justify-content: center; /* Center-align vertically */
+  align-items: center; /* Center-align horizontally */
+  text-align: center; /* Center-align text */
+  transition: transform 0.5s; /* Smooth transition for animations */
+  border: 1px solid var(--color-white); /* Thin border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding */
+  width: 225px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  background: var(--color-black); /* Black background */
+  text-decoration: none; /* Remove text decoration */
+  color: var(--color-white); /* White text color */
+}
+
+.contact-box:hover {
+  transform: scale(1.1); /* Scale up on hover */
+ 
+}
+
+.contact-icon {
+  font-size: 60px; /* Size for large icons */
+  color: var(--color-white); /* White icon color */
+  margin-bottom: 10px; /* Spacing below the icon */
+}
+
+.contact-name {
+  font-size: 24px; /* Larger text for contact name */
+  color: #f9004d; /* Red text color */
+  text-decoration: underline; /* Underline the name */
+  margin-bottom: 10px; /* Spacing below the name */
+}
+
+.contact-info {
+  font-size: 16px; /* Smaller font for contact info */
+  color: var(--color-white); /* White text color */
+}
+
+.support-section {
+  text-align: center; /* Center-align text */
+  font-size: 23px; /* Font size for support message */
+  padding: 20px; /* Padding */
+  color: azure;
+}
+
+.support-link {
+  color: var(--color-red); /* Red text color */
+  text-decoration: underline; /* Underline for link */
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Allow the box to adjust to content */
+  }
+}

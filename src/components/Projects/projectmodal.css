@@ -1,0 +1,56 @@
+.modal-backdrop {
+  position: fixed; /* Cover the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark backdrop */
+  display: flex;
+  justify-content: center; /* Center-align the modal content */
+  align-items: center; /* Align vertically */
+  z-index: 9999; /* Ensure it appears above all other content */
+}
+
+.modal-content {
+  position: relative; /* Relative positioning for inner elements */
+  background: white; /* Background for the modal */
+  padding: 30px; /* Increase padding for better layout */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 80%; /* Prevent the modal from exceeding viewport width */
+  max-height: 80%; /* Prevent the modal from exceeding viewport height */
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.modal-content img {
+  max-width: 100%; /* Ensure the image doesn't exceed modal boundaries */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.close-modal {
+  position: absolute; /* Absolute position within modal content */
+  top: 15px; /* Distance from the top edge */
+  right: 15px; /* Distance from the right edge */
+  background: var(--color-red); /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 15px; /* Sufficient padding for easy clicking */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.close-modal:hover {
+  background: white; /* Background change on hover */
+  color: var(--color-red); /* Text color change on hover */
+  border: 1px solid var(--color-red); /* Border on hover */
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .close-modal {
+    top: 10px; /* Reduced top padding for smaller screens */
+    right: 10px; /* Reduced right padding for smaller screens */
+  }
+}

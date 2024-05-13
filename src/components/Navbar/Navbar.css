@@ -1,0 +1,99 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px; 
+    color: var(--color-white);
+  }
+
+  .my-logo {
+    font-family: cursive;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .my-logo a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
+
+  #log-red{
+    color: #f9004d;
+  }
+  #logo-red {
+    color: transparent;
+    -webkit-text-stroke: 1px #f9004d;
+    background: url(../../images/redbluewa.jpg);
+    -webkit-background-clip: text ;
+    animation: spin 20s linear infinite;
+  }
+  
+  .hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Large enough for easy click */
+    cursor: pointer;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex; /* Horizontal layout */
+    list-style: none; /* Remove bullets */
+    justify-content: flex-end; /* Align to the right */
+    flex: 1;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin: 0 35px; /* Original spacing */
+    cursor: pointer;
+  }
+  
+  .nav-links a {
+    color: var(--color-white); /* White color */
+    text-decoration: none; /* No underlining */
+    font-size: large; /* Larger text */
+    position: relative;
+    font-family: cursive;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    height: 3px;
+    width: 0; /* Initially no underline */
+    position: absolute;
+    bottom: -5px; /* Position underline */
+    left: 50%; /* Centered */
+    transform: translateX(-50%);
+    background: var(--color-white); /* White underline */
+    transition: width 0.3s; /* Smooth transition */
+  }
+  
+  .nav-links a:hover::after {
+    width: 70%; /* Hover effect for underline */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* Show hamburger icon */
+    }
+  
+    .nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column; /* Vertical layout */
+      align-items: flex-end; /* Align items to the right */
+      position: absolute; /* For dropdown effect */
+      top: 50px; /* Adjust based on nav height */
+      right: 20px; /* Align to the right */
+      background: transparent; /* No background to match original design */
+    }
+  
+    .navbar.open .nav-links {
+      display: flex; /* Show when open */
+    }
+  
+    .nav-links li {
+      margin: 10px 0; /* Spacing for vertical layout */
+    }
+  }
+  
